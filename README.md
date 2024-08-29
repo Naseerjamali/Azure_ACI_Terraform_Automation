@@ -8,7 +8,9 @@ Clone this repo and then run the bash script, it will:
 3. Run terraform commands and deploys the services
 4. Outputs the ACI weblink, ACR name.
 5. Logs into the ACR
-6. Pushes the docker image
-7. ACR will automatically detects the new image and creates a new container.
+6. Tags the image as per registry convention
+7. Pushes the docker image
+8. ACR will automatically detects the new image and creates a new container
+9. Finally it will destroy the whole after 2 mins (you can change this or comment terraform destroy command)
 
 The script will ask you for the image name present in your local and then registry name.
